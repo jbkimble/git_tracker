@@ -6,7 +6,7 @@ describe 'create commit from api endpoint' do
       data = payload.to_json
       commit_count = Commit.count
 
-      post "/api/v1/commits", json_data
+      post "/api/v1/commits", data
 
       new_commit_count = Commit.count
 

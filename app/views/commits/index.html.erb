@@ -1,0 +1,7 @@
+<% @commits.each do |commit| %>
+  <h3>Commit</h3>
+  <%= commit.sha %>
+  <%= commit.message %>
+  <%= commit.author %>
+  <%= commit.timestamp %>
+<% end %>

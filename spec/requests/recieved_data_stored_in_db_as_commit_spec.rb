@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'create commit from api endpoint' do
   context 'receives data' do
     it 'persists the data to db as commit' do
-      data = payload.to_json
+      data = payload
       commit_count = Commit.count
 
       post "/api/v1/commits", data
@@ -11,7 +11,7 @@ describe 'create commit from api endpoint' do
       new_commit_count = Commit.count
 
       expect(new_commit_count).to eq(commit_count + 1)
-      expect(Commit.first.id).to eq('0d1a26e')
+      expect(Commit.first.sha).to eq('0d1a26e')
     end
   end
 end

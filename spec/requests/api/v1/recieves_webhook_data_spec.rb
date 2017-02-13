@@ -23,7 +23,7 @@ describe 'github webhook endpoint' do
             }}
 
       json_data = data.to_json
-      post "/api/v1/commits", json_data, {'CONTENT_TYPE' => 'application/json'}
+      post "/api/v1/commits", json_data
       # reponse = JSON.parse(response.body)
       expect(response).to be_success
     end

@@ -6,6 +6,7 @@ class Api::V1::CommitsController < ApplicationController
   def create
     commit = Commit.new(commit_params)
     commit.save
+    render text: commit_params
   end
 
   private

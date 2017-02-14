@@ -1,6 +1,6 @@
 class CommitsController < ApplicationController
   def index
-    @commits = Commit.all
+    @commits = Commit.limit(10)
   end
 
 end

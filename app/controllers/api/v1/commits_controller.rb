@@ -1,11 +1,9 @@
 class Api::V1::CommitsController < ApplicationController
-  # protect_from_forgery with: :null_session
   skip_before_filter  :verify_authenticity_token
 
 
   def create
     commit = Commit.new(commit_params)
-    puts commit
     commit.save
   end
 

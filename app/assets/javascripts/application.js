@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+window.setInterval(freshPage, 10000);
+
+function freshPage(){
+  window.location('https://stormy-taiga-15950.herokuapp.com/')
+}
